@@ -141,6 +141,8 @@ class Inferencer():
 
         doc_chunks = [chunk.replace(" \n ", '\n').strip() for chunk in chunks(doc_sents, self.chunk_size)]
         doc_chunks = [chunk for chunk in doc_chunks if chunk != '']
+        if len(doc_chunks) == 0:
+            doc_chunks = ['']
 
         '''
         [chunk_1, chunk_2, chunk_3, chunk_4, ...]

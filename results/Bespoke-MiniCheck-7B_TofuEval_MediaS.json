@@ -1,0 +1,19 @@
+{
+  "model": "Bespoke-MiniCheck-7B",
+  "dataset": "TofuEval-MediaS",
+  "n_samples": 726,
+  "overall_bacc": 75.89,
+  "inference_time_s": 82.32,
+  "samples_per_minute": 529.1,
+  "avg_doc_tokens": 778.3,
+  "bins": [
+    {
+      "bin_label": "500-1000",
+      "bin_min": 500,
+      "bin_max": 1000,
+      "n": 726,
+      "bacc": 75.89,
+      "avg_doc_tokens": 778.3
+    }
+  ]
+}

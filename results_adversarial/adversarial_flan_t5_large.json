@@ -1,0 +1,2923 @@
+{
+  "model": "flan-t5-large",
+  "n_samples": 360,
+  "detection_rate": 42.5,
+  "inference_time_s": 22.92,
+  "samples_per_minute": 942.6,
+  "by_hallucination_type": {
+    "numeric": {
+      "n": 120,
+      "detection_rate": 46.67,
+      "bacc": 46.67
+    },
+    "entity": {
+      "n": 120,
+      "detection_rate": 38.33,
+      "bacc": 38.33
+    },
+    "contradict": {
+      "n": 120,
+      "detection_rate": 42.5,
+      "bacc": 42.5
+    }
+  },
+  "by_injection_position": {
+    "beginning": {
+      "n": 120,
+      "detection_rate": 42.5,
+      "bacc": 42.5
+    },
+    "middle": {
+      "n": 120,
+      "detection_rate": 43.33,
+      "bacc": 43.33
+    },
+    "end": {
+      "n": 120,
+      "detection_rate": 41.67,
+      "bacc": 41.67
+    }
+  },
+  "per_sample": [
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0319
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.967
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8762
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1244
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.876
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9237
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9431
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.17
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0143
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9776
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0561
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9653
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7682
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2447
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9611
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9847
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9493
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0539
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0199
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9681
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1455
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8048
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9418
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1235
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0086
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0113
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9668
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1424
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9637
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9636
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9486
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9673
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0638
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.3011
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0646
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0826
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1057
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9822
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0319
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.966
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9055
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1123
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9159
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9175
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.944
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1809
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0134
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9204
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0532
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.944
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7889
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.4064
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.976
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9806
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9493
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0545
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1484
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0648
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9769
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1702
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7578
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9605
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.101
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0076
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0122
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9407
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0975
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9665
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.969
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9571
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.4711
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0891
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9297
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0554
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1522
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.094
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9778
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0324
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9667
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9234
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1708
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9023
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9216
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9164
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2625
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.015
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9251
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0526
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9621
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.6369
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0776
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9477
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.983
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9493
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0513
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1647
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0312
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9769
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2137
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7961
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9233
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0868
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0086
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0123
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9592
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1397
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9581
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9728
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9555
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8078
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0891
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9192
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0554
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1359
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0945
+    },
+    {
+      "hallucination_type": "numeric",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9778
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0319
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9627
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.916
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.5654
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8895
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9351
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9628
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9752
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0145
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9776
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0626
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9612
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7765
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.5598
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.984
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9853
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9493
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0623
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.173
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2086
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9769
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1358
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8829
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9709
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1098
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0081
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0136
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9666
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0957
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9688
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9739
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.961
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9671
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1064
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9298
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0605
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.3165
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.117
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.98
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0319
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9602
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9196
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1664
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9556
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9344
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9478
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9707
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0133
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9774
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0603
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9744
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.5702
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.121
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9753
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9493
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0552
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1777
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1044
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9769
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.3333
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8956
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9508
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.094
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0085
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0149
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9634
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0928
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9637
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9742
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.962
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9666
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0891
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9443
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0554
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.6564
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1309
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9815
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0258
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9637
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8934
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1281
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9469
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9387
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9607
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9766
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0153
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9705
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0577
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.973
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8011
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.5125
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9821
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9842
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9493
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0744
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2387
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0807
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9769
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1638
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8936
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9518
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1038
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0081
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0114
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9598
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0855
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.968
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9659
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9632
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9692
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0891
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9536
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0554
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.6624
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1303
+    },
+    {
+      "hallucination_type": "entity",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9831
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0319
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9238
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9305
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2048
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8266
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9402
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9516
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8297
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0139
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9776
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0519
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9562
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7348
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2955
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9841
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9863
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9493
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0509
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2106
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1357
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9769
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.3185
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8517
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9566
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1043
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0114
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0137
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9739
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1032
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.971
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9409
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9012
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9673
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0916
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.6708
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0677
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1275
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1103
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "beginning",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9822
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0319
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9629
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9481
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.3886
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8674
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9348
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8529
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9421
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0147
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9677
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0601
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9612
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7463
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1434
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9601
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9837
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9493
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0627
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2116
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.14
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9769
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.3398
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7119
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9462
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0855
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0078
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0133
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.974
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0922
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9653
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.971
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9531
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9536
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0891
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8629
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0554
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.4741
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1389
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "middle",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9778
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0373
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8449
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9356
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9829
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.2743
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9134
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9375
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9313
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7441
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0154
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9651
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0555
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8276
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7277
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.4504
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9836
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.987
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9493
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0662
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.168
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0881
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9769
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1922
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.6984
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.8956
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0932
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0074
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0137
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9749
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.1452
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9676
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9467
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9531
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9678
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0891
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.7851
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.0554
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.3123
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 0,
+      "correct": true,
+      "prob": 0.148
+    },
+    {
+      "hallucination_type": "contradict",
+      "injection_position": "end",
+      "original_label": 1,
+      "predicted_label": 1,
+      "correct": false,
+      "prob": 0.9778
+    }
+  ]
+}

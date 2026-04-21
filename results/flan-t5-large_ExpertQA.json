@@ -1,0 +1,51 @@
+{
+  "model": "flan-t5-large",
+  "dataset": "ExpertQA",
+  "n_samples": 3702,
+  "overall_bacc": 58.95,
+  "inference_time_s": 193.22,
+  "samples_per_minute": 1149.6,
+  "avg_doc_tokens": 432.9,
+  "bins": [
+    {
+      "bin_label": "0-500",
+      "bin_min": 0,
+      "bin_max": 500,
+      "n": 3241,
+      "bacc": 58.55,
+      "avg_doc_tokens": 143.8
+    },
+    {
+      "bin_label": "500-1000",
+      "bin_min": 500,
+      "bin_max": 1000,
+      "n": 118,
+      "bacc": 61.56,
+      "avg_doc_tokens": 731.1
+    },
+    {
+      "bin_label": "1000-2000",
+      "bin_min": 1000,
+      "bin_max": 2000,
+      "n": 148,
+      "bacc": 49.43,
+      "avg_doc_tokens": 1444.9
+    },
+    {
+      "bin_label": "2000-4000",
+      "bin_min": 2000,
+      "bin_max": 4000,
+      "n": 124,
+      "bacc": 66.83,
+      "avg_doc_tokens": 2818.9
+    },
+    {
+      "bin_label": "4000+",
+      "bin_min": 4000,
+      "bin_max": -1,
+      "n": 71,
+      "bacc": 62.56,
+      "avg_doc_tokens": 6857.6
+    }
+  ]
+}

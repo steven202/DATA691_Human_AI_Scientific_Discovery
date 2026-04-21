@@ -1,0 +1,10 @@
+{
+  "model": "google/gemma-4-31b-it:free",
+  "model_short": "Gemma-4-31B",
+  "dataset": "SciFact",
+  "n_samples": 20,
+  "overall_bacc": 50.0,
+  "inference_time_s": 1135.71,
+  "samples_per_minute": 1.1,
+  "avg_doc_tokens": 46.4
+}

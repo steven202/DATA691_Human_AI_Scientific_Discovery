@@ -1,0 +1,10 @@
+{
+  "model": "flan-t5-large",
+  "dataset": "TofuEval-MeetB",
+  "n_samples": 100,
+  "overall_bacc": 79.38,
+  "inference_time_s": 6.97,
+  "samples_per_minute": 861.4,
+  "avg_doc_tokens": 791.7,
+  "bins": []
+}

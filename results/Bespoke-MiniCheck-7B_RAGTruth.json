@@ -1,0 +1,35 @@
+{
+  "model": "Bespoke-MiniCheck-7B",
+  "dataset": "RAGTruth",
+  "n_samples": 16371,
+  "overall_bacc": 84.09,
+  "inference_time_s": 1217.77,
+  "samples_per_minute": 806.6,
+  "avg_doc_tokens": 411.6,
+  "bins": [
+    {
+      "bin_label": "0-500",
+      "bin_min": 0,
+      "bin_max": 500,
+      "n": 12838,
+      "bacc": 84.04,
+      "avg_doc_tokens": 300.5
+    },
+    {
+      "bin_label": "500-1000",
+      "bin_min": 500,
+      "bin_max": 1000,
+      "n": 2866,
+      "bacc": 84.51,
+      "avg_doc_tokens": 720.8
+    },
+    {
+      "bin_label": "1000-2000",
+      "bin_min": 1000,
+      "bin_max": 2000,
+      "n": 667,
+      "bacc": 81.39,
+      "avg_doc_tokens": 1222.0
+    }
+  ]
+}

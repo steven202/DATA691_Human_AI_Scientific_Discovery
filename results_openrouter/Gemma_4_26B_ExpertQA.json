@@ -1,0 +1,10 @@
+{
+  "model": "google/gemma-4-26b-a4b-it:free",
+  "model_short": "Gemma-4-26B",
+  "dataset": "ExpertQA",
+  "n_samples": 20,
+  "overall_bacc": 55.0,
+  "inference_time_s": 91.8,
+  "samples_per_minute": 13.1,
+  "avg_doc_tokens": 556.0
+}

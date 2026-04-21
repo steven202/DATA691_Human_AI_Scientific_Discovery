@@ -1,0 +1,10 @@
+{
+  "model": "arcee-ai/trinity-large-preview:free",
+  "model_short": "Trinity-Large",
+  "dataset": "ExpertQA",
+  "n_samples": 20,
+  "overall_bacc": 100.0,
+  "inference_time_s": 1283.15,
+  "samples_per_minute": 0.9,
+  "avg_doc_tokens": 857.0
+}

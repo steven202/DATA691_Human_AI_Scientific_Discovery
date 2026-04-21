@@ -1,0 +1,10 @@
+{
+  "model": "openai/gpt-oss-120b:free",
+  "model_short": "GPT-OSS-120B",
+  "dataset": "ExpertQA",
+  "n_samples": 10,
+  "overall_bacc": 100.0,
+  "inference_time_s": 705.34,
+  "samples_per_minute": 0.9,
+  "avg_doc_tokens": 149.1
+}
