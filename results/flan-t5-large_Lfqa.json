@@ -1,0 +1,27 @@
+{
+  "model": "flan-t5-large",
+  "dataset": "Lfqa",
+  "n_samples": 100,
+  "overall_bacc": 88.31,
+  "inference_time_s": 3.32,
+  "samples_per_minute": 1809.1,
+  "avg_doc_tokens": 319.6,
+  "bins": [
+    {
+      "bin_label": "0-500",
+      "bin_min": 0,
+      "bin_max": 500,
+      "n": 99,
+      "bacc": 88.26,
+      "avg_doc_tokens": 317.5
+    },
+    {
+      "bin_label": "500-1000",
+      "bin_min": 500,
+      "bin_max": 1000,
+      "n": 1,
+      "bacc": null,
+      "avg_doc_tokens": 521.0
+    }
+  ]
+}

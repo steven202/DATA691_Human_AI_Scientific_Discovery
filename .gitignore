@@ -36,6 +36,16 @@ generate_plots.py
 minicheck/
 synthetic_data_gen/
 preds/
+images/
+
+# Old files
+*.ipynb_checkpoints/
+minicheck_long_context_research_notebook*.ipynb
+results_1/
+show.sh
+slides.pdf
+summhay_keys.txt
+ckpts/
 
 # Python
 profile_default/

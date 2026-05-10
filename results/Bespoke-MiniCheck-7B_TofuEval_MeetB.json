@@ -1,0 +1,27 @@
+{
+  "model": "Bespoke-MiniCheck-7B",
+  "dataset": "TofuEval-MeetB",
+  "n_samples": 100,
+  "overall_bacc": 76.25,
+  "inference_time_s": 10.99,
+  "samples_per_minute": 546.1,
+  "avg_doc_tokens": 791.7,
+  "bins": [
+    {
+      "bin_label": "500-1000",
+      "bin_min": 500,
+      "bin_max": 1000,
+      "n": 82,
+      "bacc": 70.0,
+      "avg_doc_tokens": 736.1
+    },
+    {
+      "bin_label": "1000-2000",
+      "bin_min": 1000,
+      "bin_max": 2000,
+      "n": 18,
+      "bacc": 78.75,
+      "avg_doc_tokens": 1044.9
+    }
+  ]
+}
