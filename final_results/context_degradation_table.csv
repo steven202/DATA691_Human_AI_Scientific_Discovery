@@ -1,0 +1,5 @@
+model,dataset,short_bin,short_bacc,long_bin,long_bacc,delta_bacc
+Bespoke-MiniCheck-7B,ExpertQA,0-500,58.67,1000-2000,48.11,-10.56
+Bespoke-MiniCheck-7B,RAGTruth,0-500,84.04,1000-2000,81.39,-2.65
+flan-t5-large,ExpertQA,0-500,58.55,1000-2000,49.43,-9.12
+flan-t5-large,RAGTruth,0-500,78.13,1000-2000,73.7,-4.43

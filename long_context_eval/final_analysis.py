@@ -78,8 +78,16 @@ def build_overall_table(results: List[dict]) -> pd.DataFrame:
             "avg_doc_tokens": r.get("avg_doc_tokens"),
             "inference_time_s": r.get("inference_time_s"),
             "samples_per_minute": r.get("samples_per_minute"),
+            "_has_bins": int(bool(r.get("bins"))),
         })
     df = pd.DataFrame(rows)
+    if df.empty:
+        return df
+    df = (
+        df.sort_values(["model", "dataset", "_has_bins", "n_samples"])
+        .drop_duplicates(["model", "dataset"], keep="last")
+        .drop(columns="_has_bins")
+    )
     return df.sort_values(["model", "dataset"]).reset_index(drop=True)
 
 
@@ -134,21 +142,97 @@ def plot_unified_bacc_heatmap(bins: pd.DataFrame, out_path: Path):
     bin_ord = [b for b in bin_ord if b in pivot.columns]
     pivot = pivot.reindex(columns=bin_ord)
 
+    annot = pivot.copy()
+    annot = annot.map(lambda x: "" if pd.isna(x) else f"{x:.1f}")
+
     fig, ax = plt.subplots(figsize=(max(8, len(bin_ord) * 1.8), max(5, len(pivot) * 0.6)))
+    ax.set_facecolor("#e6e6e6")
     sns.heatmap(
         pivot,
-        annot=True,
-        fmt=".1f",
+        annot=annot,
+        fmt="",
         cmap="RdYlGn",
         vmin=40,
         vmax=100,
         linewidths=0.5,
+        linecolor="white",
+        mask=pivot.isna(),
         ax=ax,
         cbar_kws={"label": "BAcc (%)"},
     )
-    ax.set_title("Balanced Accuracy (%) — All Models × Document Length", fontsize=14, fontweight="bold")
+    ax.set_title("Balanced Accuracy (%) by Length Bin (gray = no samples)", fontsize=14, fontweight="bold")
     ax.set_ylabel("")
     ax.set_xlabel("Document Token-Length Bin", fontsize=11)
+    fig.tight_layout()
+    fig.savefig(out_path, dpi=150)
+    plt.close(fig)
+    print(f"[analysis] Saved: {out_path}")
+
+
+def plot_overall_bacc_matrix(overall: pd.DataFrame, out_path: Path):
+    """Overall BAcc matrix across all evaluated model/dataset pairs."""
+    try:
+        import seaborn as sns
+    except ImportError:
+        print("[analysis] seaborn not installed; skipping overall matrix.")
+        return
+
+    if overall.empty:
+        print("[analysis] No overall data; skipping overall matrix.")
+        return
+
+    model_order = [
+        "Bespoke-MiniCheck-7B",
+        "flan-t5-large",
+        "Gemma-4-26B",
+        "Gemma-4-31B",
+        "GPT-OSS-120B",
+        "GPT-OSS-20B",
+        "Trinity-Large",
+    ]
+    dataset_order = [
+        "ExpertQA",
+        "RAGTruth",
+        "SciFact",
+        "SummHay",
+        "TofuEval-MediaS",
+        "Lfqa",
+        "TofuEval-MeetB",
+    ]
+
+    pivot = overall.pivot_table(
+        index="dataset",
+        columns="model",
+        values="overall_bacc",
+        aggfunc="first",
+    )
+    row_order = [d for d in dataset_order if d in pivot.index] + [d for d in pivot.index if d not in dataset_order]
+    col_order = [m for m in model_order if m in pivot.columns] + [m for m in pivot.columns if m not in model_order]
+    pivot = pivot.reindex(index=row_order, columns=col_order)
+
+    annot = pivot.copy()
+    annot = annot.map(lambda x: "" if pd.isna(x) else f"{x:.0f}")
+
+    fig, ax = plt.subplots(figsize=(max(9, len(col_order) * 1.25), max(4.5, len(row_order) * 0.55)))
+    ax.set_facecolor("#e6e6e6")
+    sns.heatmap(
+        pivot,
+        annot=annot,
+        fmt="",
+        cmap="RdYlGn",
+        vmin=40,
+        vmax=100,
+        linewidths=0.5,
+        linecolor="white",
+        mask=pivot.isna(),
+        ax=ax,
+        cbar_kws={"label": "BAcc (%)"},
+    )
+    ax.set_title("Overall Balanced Accuracy Across Evaluated Models (gray = not run)", fontsize=14, fontweight="bold")
+    ax.set_xlabel("Model")
+    ax.set_ylabel("Dataset")
+    ax.tick_params(axis="x", rotation=25)
+    ax.tick_params(axis="y", rotation=0)
     fig.tight_layout()
     fig.savefig(out_path, dpi=150)
     plt.close(fig)
@@ -485,6 +569,7 @@ def main():
     # Generate figures
     print("\n[analysis] Generating figures...")
     plot_unified_bacc_heatmap(bins, output_dir / "unified_bacc_heatmap.png")
+    plot_overall_bacc_matrix(overall, output_dir / "overall_bacc_matrix.png")
     plot_model_comparison(overall, output_dir / "model_comparison.png")
     plot_adversarial_results(adv_results, output_dir / "adversarial_results.png")
     plot_openrouter_comparison(openrouter_results, all_results, output_dir / "openrouter_comparison.png")
