@@ -28,12 +28,12 @@
 \maketitle
 
 \begin{abstract}
-Retrieval-augmented generation (RAG) systems often retrieve long, noisy documents that challenge fact-checking models. We evaluate MiniCheck-style small fact-checkers (\texttt{flan-t5-large}, \texttt{Bespoke-MiniCheck-7B}) under two stress conditions: (1) natural long contexts ranging from hundreds to 74k tokens, and (2) adversarial hallucinations injected at beginning, middle, and end positions. Our key findings are: (1) Both models exhibit a ``lost in the middle'' phenomenon on ExpertQA---balanced accuracy (BAcc) drops 9-10\% at 1k-2k tokens then recovers at longer lengths. (2) Models achieve near-perfect BAcc on 74k-token SummHay documents via chunking but throughput collapses to 3.9 samples/minute. (3) Adversarial injection fools the models 57.5\% of the time; fabricated entities are hardest to detect (38.3\% detection rate). (4) No positional rescue exists---injection detection is nearly identical across beginning, middle, and end positions. These results reveal fundamental trade-offs between accuracy, context length, and throughput in deployable RAG fact-checking systems.
+Retrieval-augmented generation (RAG) systems retrieve long, noisy documents that challenge fact-checking models. We evaluate MiniCheck-style small fact-checkers (\texttt{flan-t5-large}, \texttt{Bespoke-MiniCheck-7B}) under two stress conditions: (1) natural long contexts ranging from hundreds to 74k tokens, and (2) adversarial hallucinations injected at beginning, middle, and end positions. Our key findings are: (1) Both models exhibit a ``lost in the middle'' phenomenon on ExpertQA---balanced accuracy (BAcc) drops 9-10\% at 1k-2k tokens then recovers at longer lengths. Only ExpertQA has sufficient length-bin coverage to show the full U-shaped recovery curve; other datasets lack samples in longer bins. (2) Models achieve near-perfect BAcc on 74k-token SummHay documents via chunking but throughput collapses to 3.9 samples/minute. (3) Adversarial injection fools the models 57.5\% of the time; fabricated entities are hardest to detect (38.3\% detection rate). (4) No positional rescue exists---injection detection is nearly identical across beginning, middle, and end positions.
 \end{abstract}
 
 \section{Introduction}
 
-Large language models (LLMs) deployed in retrieval-augmented generation (RAG) pipelines must verify facts against retrieved documents that can span tens of thousands of tokens. Specialized fact-checkers such as MiniCheck~\cite{tang2024minicheck} and AlignScore~\cite{zha2023alignscore} offer efficient alternatives to large LLMs but are predominantly trained and evaluated on short, clean snippets. This creates a critical gap: their robustness under realistic RAG conditions remains poorly understood.
+Large language models (LLMs) deployed in retrieval-augmented generation (RAG) pipelines must verify facts against retrieved documents spanning tens of thousands of tokens. Specialized fact-checkers such as MiniCheck~\cite{tang2024minicheck} and AlignScore~\cite{zha2023alignscore} offer efficient alternatives to large LLMs but are predominantly trained and evaluated on short, clean snippets. This creates a critical gap: their robustness under realistic RAG conditions remains poorly understood.
 
 Two key failure modes emerge in long-context RAG: (1) context degradation, where accuracy drops as document length increases, and (2) adversarial vulnerability, where injected hallucinations bypass detection mechanisms. Prior work on ``lost in the middle''~\cite{laban2024summary} shows that LLMs struggle to utilize information buried in extended contexts; it is an open question whether small fact-checkers with chunking-based architectures suffer similar degradation.
 
@@ -53,13 +53,13 @@ Our contributions:
 
 \section{Related Work}
 
-\textbf{MiniCheck and specialized fact-checkers.} MiniCheck~\cite{tang2024minicheck} uses a chunking-and-max strategy: documents are split into sentence-preserving chunks, each chunk is scored, and the maximum support probability determines the final verdict. This approach enables handling long documents but assumes the correct chunk will achieve the highest score.
+MiniCheck~\cite{tang2024minicheck} uses a chunking-and-max strategy: documents are split into sentence-preserving chunks, each chunk is scored, and the maximum support probability determines the final verdict. This approach enables handling long documents but assumes the correct chunk will achieve the highest score.
 
-\textbf{Lost in the middle phenomenon.} Prior work~\cite{laban2024summary} demonstrates that LLMs perform worse on information located in the middle of long contexts compared to beginning or end positions. We investigate whether chunking-based fact-checkers exhibit a similar U-shaped performance curve.
+Prior work on ``lost in the middle''~\cite{laban2024summary} demonstrates that LLMs perform worse on information located in the middle of long contexts compared to beginning or end positions. We investigate whether chunking-based fact-checkers exhibit a similar U-shaped performance curve.
 
-\textbf{Adversarial robustness in RAG.} Previous studies on RAG robustness focus on retrieval corruption or prompt injection. We introduce a novel stress test: injecting synthetic hallucinations directly into the grounding documents at controlled positions, measuring whether the fact-checker can detect them.
+Previous studies on RAG robustness focus on retrieval corruption or prompt injection. We introduce a novel stress test: injecting synthetic hallucinations directly into the grounding documents at controlled positions, measuring whether the fact-checker can detect them.
 
-\textbf{Comparison to prior work.} Unlike MiniCheck's original evaluation on short synthetic documents, we evaluate on natural long-context datasets (ExpertQA, RAGTruth, SummHay) and introduce adversarial injection as a systematic probe for positional vulnerabilities.
+Unlike MiniCheck's original evaluation on short synthetic documents, we evaluate on natural long-context datasets (ExpertQA, RAGTruth, SummHay) and introduce adversarial injection as a systematic probe for positional vulnerabilities.
 
 \section{Methods}
 
@@ -84,7 +84,7 @@ Dataset & Avg Tokens & Samples & Type \\
 \midrule
 ExpertQA & 433 & 3,702 & Health QA \\
 RAGTruth & 412 & 16,371 & RAG hallucination \\
-SciFact & 57 & 188 & Sci. fact-checking \\
+SciFact & 57 & 188 & Scientific fact-checking \\
 SummHay & 74,488 & 100 & Long summaries \\
 TofuEval-MediaS & 778 & 726 & Multi-topic Wikipedia \\
 TofuEval-MeetB & 792 & 100 & Meeting summaries \\
@@ -93,7 +93,7 @@ Lfqa & 320 & 100 & Long-form QA \\
 \end{tabular}
 \end{table}
 
-Table~\ref{tab:datasets} summarizes the 7 datasets. ExpertQA and RAGTruth have sufficient length diversity (spanning 0-500 to 4000+ tokens) for bin analysis. SummHay provides an extreme-length stress test at 74k average tokens.
+Table~\ref{tab:datasets} summarizes the 7 datasets. ExpertQA has sufficient length diversity (spanning 0-500 to 4000+ tokens across 5 bins) for full U-shape analysis. Other datasets have fewer length bins available (see Section~\ref{sec:degradation}).
 
 \subsection{Evaluation Metrics}
 
@@ -129,27 +129,26 @@ Injections target beginning (first chunk), middle ($\lfloor n/2 \rfloor$ chunk),
 Figure~\ref{fig:bacc_matrix} shows the full BAcc matrix. Key observations:
 \begin{itemize}
     \item \textbf{Bespoke-MiniCheck-7B} achieves 84.1\% BAcc on RAGTruth and 100\% on SummHay.
-    \item \textbf{flan-t5-large} achieves 77.98\% on RAGTruth and 100\% on SummHay.
+    \item \textbf{flan-t5-large} achieves 78.0\% on RAGTruth and 100\% on SummHay.
     \item OpenRouter models show mixed results: Gemma-4-26B achieves only 55.0\% on ExpertQA (vs 59.0\% for flan-t5-large despite being 30x larger).
 \end{itemize}
 
 \subsection{Context Degradation: ``Lost in the Middle''}
+\label{sec:degradation}
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.85\textwidth]{../final_results/lost_in_middle_expertqa.png}
-\caption{ExpertQA: BAcc by document-length bin showing U-shaped ``lost in the middle'' phenomenon. Trough occurs at 1k-2k tokens with recovery at 2k-4k tokens.}
-\label{fig:lost_in_middle}
+\includegraphics[width=0.85\textwidth]{../final_results/context_degradation_by_dataset.png}
+\caption{BAcc by document-length bin across datasets. ExpertQA has 5 bins showing clear U-shape with recovery. RAGTruth has 3 bins showing degradation but lacks recovery bins at 2000+ tokens.}
+\label{fig:degradation}
 \end{figure}
 
-Figure~\ref{fig:lost_in_middle} reveals the ``lost in the middle'' phenomenon on ExpertQA:
+Figure~\ref{fig:degradation} reveals the ``lost in the middle'' phenomenon. Only ExpertQA has samples in all 5 length bins (0-500, 500-1000, 1000-2000, 2000-4000, 4000+) enabling observation of the full U-shaped curve with recovery. Other datasets lack sufficient samples in longer bins to show the recovery phase:
 \begin{itemize}
-    \item \textbf{Bespoke-MiniCheck-7B}: 58.7\% (0-500) $\rightarrow$ 48.1\% (1000-2000) $\rightarrow$ 59.1\% (2000-4000).
-    \item \textbf{flan-t5-large}: 58.6\% (0-500) $\rightarrow$ 49.4\% (1000-2000) $\rightarrow$ 66.8\% (2000-4000).
+    \item \textbf{ExpertQA (5 bins)}: Full U-shape visible. Bespoke-MiniCheck-7B: 58.7\% $\rightarrow$ 48.1\% $\rightarrow$ 59.1\%. flan-t5-large: 58.6\% $\rightarrow$ 49.4\% $\rightarrow$ 66.8\%.
+    \item \textbf{RAGTruth (3 bins)}: Degradation visible (84.0\% $\rightarrow$ 81.4\% for Bespoke; 78.1\% $\rightarrow$ 73.7\% for flan-t5) but no bins at 2000+ tokens to show recovery.
+    \item \textbf{Other datasets}: Insufficient length diversity for bin analysis.
 \end{itemize}
-Both models show a 9-10\% BAcc drop at 1k-2k tokens followed by recovery at 2k-4k tokens, confirming the U-shaped curve.
-
-Table~\ref{tab:degradation} quantifies the degradation:
 
 \begin{table}[t]
 \caption{Self-comparison: BAcc degradation from short to long documents.}
@@ -166,6 +165,8 @@ flan-t5-large & RAGTruth & 78.1\% & 73.7\% & -4.4\% \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+Table~\ref{tab:degradation} quantifies the degradation: both models show 9-10\% BAcc drop at 1k-2k tokens on ExpertQA.
 
 \subsection{Efficiency Cost: Throughput vs. Accuracy}
 
@@ -204,34 +205,32 @@ Figure~\ref{fig:adversarial} shows adversarial injection results on \texttt{flan
     \item End: 41.7\% detection
 \end{itemize}
 
-Critically, \textbf{no positional rescue exists}: injections are detected at nearly identical rates regardless of position, contradicting the hypothesis that middle-positioned information is inherently harder to fact-check.
+Critically, \textbf{no positional rescue exists}: injections are detected at nearly identical rates regardless of position.
 
 \section{Discussion}
 
 Our results reveal fundamental trade-offs in deploying small fact-checkers for RAG systems:
 
-\textbf{1. ``Lost in the middle'' is real but recoverable.} The U-shaped performance curve confirms that small fact-checkers do suffer from middle-context degradation. However, the recovery at very long lengths (2000-4000+ tokens) suggests the chunking mechanism eventually surfaces the correct evidence chunk. This differs from LLMs where middle information may be permanently forgotten.
+\textbf{1. ``Lost in the middle'' is real but dataset-dependent.} The U-shaped performance curve on ExpertQA confirms that small fact-checkers suffer middle-context degradation. The recovery at very long lengths (2000-4000+ tokens) suggests the chunking mechanism eventually surfaces the correct evidence chunk. However, the full U-shape is only observable in datasets with sufficient length diversity; most natural datasets lack samples in longer bins.
 
-\textbf{2. Throughput collapses on extreme contexts.} The 250x throughput reduction on SummHay (from 1000+ SPM to 3.9 SPM) highlights the operational cost of perfect accuracy on extremely long documents. For real-time RAG applications, this may be prohibitive.
+\textbf{2. Throughput collapses on extreme contexts.} The 250x throughput reduction on SummHay (from 1000+ SPM to 3.9 SPM) highlights the operational cost of perfect accuracy on extremely long documents.
 
-\textbf{3. Adversarial hallucinations bypass detection.} The 57.5\% overall fooling rate, combined with entity hallucinations achieving only 38.3\% detection, demonstrates that small fact-checkers cannot reliably detect sophisticated fabrications. This is concerning for deployed RAG systems where adversaries may inject false information.
+\textbf{3. Adversarial hallucinations bypass detection.} The 57.5\% overall fooling rate, with entity hallucinations at only 38.3\% detection, demonstrates vulnerability to sophisticated fabrications.
 
-\textbf{4. No positional defense exists.} The lack of positional rescue suggests that defensive strategies cannot simply bias toward beginning/end positions. More sophisticated approaches (e.g., attention-based evidence weighting) may be needed.
+\textbf{4. No positional defense exists.} The lack of positional rescue suggests defensive strategies cannot simply bias toward beginning/end positions.
 
-\textbf{Limitations:} (1) Our adversarial injection uses synthetic hallucinations which may not fully reflect real-world injection strategies. (2) OpenRouter API models were evaluated on small sample sizes (n=10-50). (3) We do not evaluate retrieval quality, focusing solely on fact-checking given retrieved documents.
+\textbf{Limitations:} (1) Adversarial injection uses synthetic hallucinations which may not reflect real-world strategies. (2) OpenRouter API models were evaluated on small sample sizes (n=10-50). (3) Only ExpertQA has sufficient length-bin coverage to show the full U-shape recovery curve.
 
 \section{Conclusion}
 
-We evaluated MiniCheck-style small fact-checkers under long-context and adversarial stress. Key findings:
+We evaluated MiniCheck-style small fact-checkers under long-context and adversarial stress:
 
 \begin{itemize}
-    \item ``Lost in the middle'' phenomenon is confirmed: 9-10\% BAcc degradation at 1k-2k tokens with recovery at longer lengths.
+    \item ``Lost in the middle'' phenomenon is confirmed: 9-10\% BAcc degradation at 1k-2k tokens with recovery at longer lengths (ExpertQA shows full U-shape).
     \item Extreme context accuracy comes at severe throughput cost: 250x slowdown on 74k-token documents.
     \item Adversarial hallucinations fool models 57.5\% of the time; entity fabrications are most effective (38.3\% detection).
     \item No positional rescue: injection detection is position-invariant.
 \end{itemize}
-
-These results inform the deployment of small fact-checkers in RAG systems: high accuracy on long documents is achievable but at significant computational cost, and current models remain vulnerable to adversarial injections.
 
 \section*{References}
 
