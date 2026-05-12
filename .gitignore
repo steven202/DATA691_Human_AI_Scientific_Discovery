@@ -50,6 +50,8 @@ images/
 
 # Generated results
 results/
+results_adversarial/
+results_openrouter/
 final_results/
 long_context_eval/
 
