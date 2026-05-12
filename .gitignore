@@ -23,6 +23,16 @@ data.tar.gz
 *.toc
 *.fdb_latexmk
 *.fls
+*.bbl
+*.blg
+*.synctex.gz
+
+# Working files (not part of deliverable)
+CLAUDE.md
+CONTEXT_SUMMARY.md
+example1.bib
+example2.bib
+paper/
 
 # Jupyter checkpoints
 *.ipynb_checkpoints/
@@ -37,6 +47,11 @@ minicheck/
 synthetic_data_gen/
 preds/
 images/
+
+# Generated results
+results/
+final_results/
+long_context_eval/
 
 # Old files
 *.ipynb_checkpoints/

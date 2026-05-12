@@ -1,7 +1,10 @@
-torch
-transformers
-datasets
-nltk
-pandas
-numpy
-openai
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+seaborn>=0.12
+scikit-learn>=1.3
+torch>=2.0
+transformers>=4.30
+datasets>=2.14
+vllm>=0.4.0
+minicheck @ git+https://github.com/Liyan06/MiniCheck.git

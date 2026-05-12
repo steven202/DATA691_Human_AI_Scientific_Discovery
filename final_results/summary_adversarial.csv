@@ -1,2 +1,0 @@
-model,detection_rate,inference_time_s,samples_per_minute,numeric_detection,entity_detection,contradict_detection,beginning_detection,middle_detection,end_detection
-flan-t5-large,42.5,22.92,942.6,46.67,38.33,42.5,42.5,43.33,41.67
