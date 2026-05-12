@@ -17,7 +17,7 @@ Evaluates MiniCheck-style small fact-checkers (`flan-t5-large`, `Bespoke-MiniChe
 
 ```
 .
-├── long_context_eval/          # Main evaluation and analysis code
+├── src/          # Main evaluation and analysis code
 │   ├── data_loader.py          # Dataset loading (LLM-AggreFact, SciFact, SummHay)
 │   ├── evaluate.py             # Evaluation pipeline (MiniCheck inference + bin BAcc)
 │   ├── rebin_predictions.py    # Adaptive per-dataset rebinning for U-shape analysis
@@ -69,7 +69,7 @@ Datasets are loaded automatically via HuggingFace `datasets` on first run. A `--
 
 ```bash
 # Full evaluation on all datasets with flan-t5-large
-python long_context_eval/evaluate.py \
+python src/evaluate.py \
     --models flan-t5-large \
     --datasets TofuEval-MediaS RAGTruth ExpertQA SciFact SummHay TofuEval-MeetB Lfqa \
     --max_samples 300 \
@@ -77,7 +77,7 @@ python long_context_eval/evaluate.py \
     --cache_dir ./ckpts
 
 # Evaluate Bespoke-MiniCheck-7B (requires GPU with sufficient VRAM)
-python long_context_eval/evaluate.py \
+python src/evaluate.py \
     --models Bespoke-MiniCheck-7B \
     --datasets RAGTruth ExpertQA \
     --max_samples 3000 \
@@ -87,7 +87,7 @@ python long_context_eval/evaluate.py \
 ### 2. Rebin predictions (for U-shape analysis)
 
 ```bash
-python long_context_eval/rebin_predictions.py
+python src/rebin_predictions.py
 ```
 
 This reads per-sample prediction CSVs from `results/` and produces adaptive bin-level BAcc in `final_results/summary_bins.csv`.
@@ -95,22 +95,12 @@ This reads per-sample prediction CSVs from `results/` and produces adaptive bin-
 ### 3. Generate figures
 
 ```bash
-python long_context_eval/plot_context_degradation.py   # Figure: context degradation
-python long_context_eval/plot_lost_in_middle.py         # Figures: lost-in-middle + throughput
-python long_context_eval/final_analysis.py              # Aggregate analysis
+python src/plot_context_degradation.py   # Figure: context degradation
+python src/plot_lost_in_middle.py         # Figures: lost-in-middle + throughput
+python src/final_analysis.py              # Aggregate analysis
 ```
 
 All figures are saved to `final_results/`.
-
-### 4. Compile the paper
-
-```bash
-cd DATA691_Human_AI_Scientific_Discovery_final_report/
-pdflatex paper.tex
-bibtex paper
-pdflatex paper.tex
-pdflatex paper.tex
-```
 
 ## Models Evaluated
 
