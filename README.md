@@ -102,6 +102,16 @@ python src/final_analysis.py              # Aggregate analysis
 
 All figures are saved to `final_results/`.
 
+### 4. Compile the paper
+
+```bash
+cd DATA691_Human_AI_Scientific_Discovery_final_report/
+pdflatex paper.tex
+bibtex paper
+pdflatex paper.tex
+pdflatex paper.tex
+```
+
 ## Models Evaluated
 
 | Model | Size | Context Window | Chunk Size |

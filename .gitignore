@@ -11,9 +11,6 @@ ckpts/
 data/
 data.tar.gz
 
-# Logs
-*.log
-
 # LaTeX auxiliary files
 *.aux
 *.out
@@ -33,7 +30,6 @@ CONTEXT_SUMMARY.md
 example1.bib
 example2.bib
 paper/
-DATA691_Human_AI_Scientific_Discovery_final_report/
 
 # Jupyter checkpoints
 *.ipynb_checkpoints/
